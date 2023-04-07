@@ -1,0 +1,21 @@
+<h1 style="text-align: center;">Events List</h1>
+
+<div class="container text-center b-0">
+  <div class="row">
+    <div class="col">
+      <div class="input-group mb-2 align-items-center">
+        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="" [(ngModel)]="newEvent">
+        <button class="btn btn-outline-secondary" type="button" style="height: 38px;" id="" (click)="saveEvent()">Button</button>
+      </div>
+      <table class="table table-striped">
+        <tbody>
+          <tr *ngFor="let event of events; let i = index;">
+            <th scope="row">{{i+1}}</th>
+            <td class="{{(!event.isCompleted) ? 'done' : ''}}" (click)="done(i)">{{event.name}}</td>
+            <td class="remove" style="color: red; font-weight: bold;" (click)="remove(i)">X</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

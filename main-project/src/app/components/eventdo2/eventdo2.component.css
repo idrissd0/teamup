@@ -1,0 +1,10 @@
+.container1{
+  max-width: 500px;
+}
+
+.container2{
+  width:  700px;
+  position: absolute;
+  right: 150px;
+  /* border: 1px solid black */
+}

@@ -1,0 +1,31 @@
+*{
+  text-decoration: none;
+  color: black;
+  list-style-type: none;
+}
+header{
+  width: 100%;
+  height: max-content;
+}
+ul{
+  width:fit-content;
+  height: fit-content;
+  margin: 15px auto 15px auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+li{
+  padding:0.5rem ;
+}
+
+a{
+  padding:0.5rem ;
+  border-radius: 5px;
+  transition: 0.5s all  ;
+}
+a:hover{
+  background: aqua;
+}

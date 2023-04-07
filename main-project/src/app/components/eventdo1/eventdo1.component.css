@@ -1,0 +1,10 @@
+
+
+.done{
+  text-decoration: line-through;
+}
+
+
+.remove{
+  cursor: pointer;
+}

@@ -1,0 +1,29 @@
+<div class="container border-0 shadow">
+  <form (ngSubmit)="submit()">
+    <h1 class="title-breef">Sing Up</h1>
+
+    <div class="form-control">
+      <label for="full-name" name="full-name" id="full-name">Full Name</label>
+      <input type="text" name="full-name" id="full-name" placeholder=""  [(ngModel)]="fullname" />
+      >{{fullname}}
+    </div>
+
+    <div class="form-control">
+      <label for="birthday" name="birthday" id="birthday">Birthday</label>
+      <input type="date" name="birthday" id="birthday" placeholder="example@gmail.com"  [(ngModel)]="bidrthDay"  />
+    </div>
+
+    <div class="form-control">
+      <label for="login" name="login" id="login">Login</label>
+      <input type="email" name="login" id="login" placeholder="example@gmail.com"  [(ngModel)]="login"  />
+    </div>
+
+    <div class="form-control">
+      <label for="password" name="password" id="password">Pasword</label>
+      <input type="password" name="password" id="password" placeholder="***********" [(ngModel)]="password" />
+    </div>
+
+    <input type="submit" value="submit" class="btn btn-block">
+  </form>
+
+</div>

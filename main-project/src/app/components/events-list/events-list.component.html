@@ -1,0 +1,32 @@
+<!-- <h1>{{ladate}}</h1> -->
+<!-- <full-calendar [options]="calendarOptions" ></full-calendar> -->
+<div class="section bg-light">
+  <!-- <div class="form-section login-box">
+    <form action="">
+      <label for="">Event label:</label>
+      <input type="text">
+
+      <label for="">Date:</label>
+      <input type="date">
+    </form>
+  </div> -->
+  <div class="login-box">
+    <h2>Inter your Event</h2>
+      <div class="user-box">
+        <input type="text" required [(ngModel)]="eventInput"/>
+        <label >Event label</label>
+        <p>>{{eventInput}}</p>
+      </div>
+      <div class="user-box">
+        <input type="date" [(ngModel)]="dateInput">
+        <p>>{{dateInput}}</p>
+      </div>
+      <input  type="submit" (click)="handlesubmit()" />
+  </div>
+  <full-calendar  [options]="calendarOptions">
+    <ng-template #eventContent let-arg>
+      <b>{{arg.timeText}}</b>
+      <i>{{arg.event.title}}</i>
+    </ng-template>
+  </full-calendar>
+</div>
