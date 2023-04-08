@@ -1,10 +1,15 @@
 <div class="container-fluid border-0 shadow">
 
   <div class="container-fluid my-3 border-0 shadow-sm w-75 m-auto">
-    <form action="" (ngSubmit)="getUsers()" class="">
-    <input type="submit" value="Get All Users" class="btn btn-block" style="width: fit-content; margin: auto;">
-    </form>
-
+    <span class="" style="display: flex; justify-content: center">
+      <form action="" (ngSubmit)="getUsers()"  >
+          <input type="submit" value="Get Users" class="btn mx-2" >
+      </form>
+      <!--  -->
+      <form action="" (ngSubmit)="hide()" >
+        <input type="submit" value="Hide Users" class="btn mx-2" >
+      </form>
+    </span>
     <h3 class="title-breef py-3" style="margin:unset !important;">Users::</h3>
 
     <table class="table w-75 m-auto" *ngIf="Users && Users.length > 0">
@@ -34,3 +39,32 @@
     </table>
     <p *ngIf="!Users || Users.length <= 0">No users Found</p>
   </div>
+
+  <div class="container-fluid border-1 shadow w-75 m-auto py-2" id="opt-container">
+    <form [formGroup]="opForm" class="example-form d-flex justify-content-center" (ngSubmit)="onSubmit()">
+      <button mat-flat-button color="accent" type="submit">
+        Display Options
+      </button>
+    </form>
+    <table class="table w-75 m-auto" *ngIf="Options && Options.length > 0">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Label</th>
+          <th>Description</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let u of Options">
+        <tr>
+          <td>{{ u.id }}</td>
+          <td>{{ u.label }}</td>
+          <td>{{ u.description }}</td>
+          <th>
+            <!-- <button mat-flat-button color="accent" routerLink="/updateUser/{{u.id}}">UpdateUser</button> -->
+        </tr>
+      </tbody>
+    </table>
+    <p *ngIf="!Options || Options.length <= 0">No Options Found</p>
+  </div>
+</div>
